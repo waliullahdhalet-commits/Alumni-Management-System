@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('job_description')->nullable();
             $table->enum('employment_type', ['full_time', 'part_time', 'internship', 'contract', 'remote']);
             $table->string('location', 100)->nullable();
-            $table->date('start-date');
+            $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->boolean('currently_working')->default(false);
             $table->timestamps();

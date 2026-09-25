@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->string('notifiable_type');
+            // $table->string('notifiable_type');
             $table->unsignedBigInteger('notifiable_id');
             $table->text('data');
             $table->timestamps();
-            $table->index(['notifiable_type', 'notifiable_id']);
+            $table->index(['notifiable_id']);
         });
     }
 

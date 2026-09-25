@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('alumni_profile_id')->constrained('alumni_profiles')->cascadeOnDelete();
             $table->string('degree', 150);
             $table->string('department', 100)->nullable();
+            $table->string('institution', 200);
             $table->date('start_year')->nullable();
             $table->date('end_year')->nullable();
             $table->string('grade')->nullable();
