@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('mode', ['physical', 'online', 'hybrid']);
             $table->string('venue');
             $table->string('meeting_url')->nullable();
+            $table->date('workshop_date');
             $table->time('start_time');
             $table->time('end_time')->nullable();
             $table->date('registeration_deadline');

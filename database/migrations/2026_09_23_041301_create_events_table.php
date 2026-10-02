@@ -20,10 +20,12 @@ return new class extends Migration
             $table->enum('event_mode', ['physical', 'online', 'hybrid']);
             $table->string('venue');
             $table->string('meeting_url')->nullable();
+            $table->date('event_date');
             $table->time('start_time');
             $table->time('end_time')->nullable();
             $table->date('registeration_deadline');
             $table->string('image')->nullable();
+            $table->enum('status', ['draft', 'published', 'cancelled', 'completed'])->default('draft');
             $table->timestamps();
         });
     }
